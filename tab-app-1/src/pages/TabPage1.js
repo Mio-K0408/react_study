@@ -1,16 +1,18 @@
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
-import { Container, Typography } from '@mui/material';
+import React from 'react';
+import { Container } from '@mui/material';
+import CustomTabs from '../components/Tab';
 
+// タブのデータを配列で定義
+const tabData = [
+    { label: 'Item One', content: 'This is content for Item One' },
+    { label: 'Item Two', content: 'This is content for Item Two' },
+    { label: 'Item Three', content: 'This is content for Item Three' },
+  ];
 
-function App() {
-  return (
-    <Container>
-        <Typography variant="h4" mt={3}>
-            ページ1
-        </Typography>
+const TabPage1 = () => (
+    <Container sx={{marginLeft:0}}>
+      <CustomTabs tabs={tabData} />      
     </Container>
-);
-}
+  );
 
-export default App;
+export default TabPage1;

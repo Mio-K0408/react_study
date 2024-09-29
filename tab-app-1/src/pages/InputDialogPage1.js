@@ -1,13 +1,30 @@
 // pages/Page3.js
 import React from 'react';
-import { Container, Typography } from '@mui/material';
+import { Container, Button, Box } from '@mui/material';
+import CustomDialog from '../components/Dialog'; // 切り分けたダイアログコンポーネントをインポート
 
-const Page3 = () => (
-  <Container>
-    <Typography variant="h4" mt={3}>
-      ページ3
-    </Typography>
-  </Container>
-);
+const InputDialogPage1 = () => {
+  const [open, setOpen] = React.useState(false);
 
-export default Page3;
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <Container sx={{ marginLeft: 0 }}>
+      <Box sx={{ typography: 'body1', m: 5 }}>
+        <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+          ダイアログ表示1
+        </Button>
+        {/* 切り分けたダイアログコンポーネントを使用 */}
+        <CustomDialog open={open} handleClose={handleClose} />
+      </Box>
+    </Container>
+  );
+};
+
+export default InputDialogPage1;
