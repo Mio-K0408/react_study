@@ -10,7 +10,7 @@ function Header() {
             <AppBar position="sticky">
                 <Toolbar variant="dense">
                     <Typography variant="h6" color="inherit" component="div">
-                        タブ練習
+                        React学習
                     </Typography>
                 </Toolbar>
             </AppBar>

@@ -40,8 +40,8 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<MenuPage />} />
         <Route path="/tagpage1" element={<TabPage1 />} />
-        <Route path="/dndpage1" element={<DndPage1 />} />
         <Route path="/inputdialogpage1" element={<InputDialogPage1 />} />
+        <Route path="/dndpage1" element={<DndPage1 />} />        
       </Routes>
 
       {/* 現在のパスが "/" でない場合にのみボタンを表示 */}

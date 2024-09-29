@@ -1,7 +1,7 @@
 // Tab.js
 import React from 'react';
 import Box from '@mui/material/Box';
-import MuiTab from '@mui/material/Tab';
+import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
@@ -17,15 +17,20 @@ const CustomTabs = ({ tabs }) => {
   };
 
   return (
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box sx={{ typography: 'body1' }}>
       {/* TabContextは現在選択中のタブを管理するコンテキスト */}
       <TabContext value={value}>
         {/* タブのリスト部分 */}
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} aria-label="customizable tabs">
+          <TabList  onChange={handleChange} aria-label="customizable tabs" 
+            TabIndicatorProps={{
+                style: {
+                    backgroundColor: '#263238', // タブ選択時の下の線の色を変更、直接色指定する場合はこの書き方をする
+                },
+            }}>
             {/* 配列のタブ情報をもとにTabを生成 */}
             {tabs.map((tab, index) => (
-              <MuiTab key={index} label={tab.label} value={index.toString()} />
+              <Tab key={index} label={tab.label} value={index.toString()} />
             ))}
           </TabList>
         </Box>
