@@ -4,8 +4,8 @@ import { Container, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const MenuPage = () => (
-  <Container>
-    <Box mt={10}>
+  <Container sx={{marginLeft:0}}>
+    <Box sx={{mt:2}}>
       <Button component={Link} to="/tagpage1" variant="contained" color="primary" sx={{ m: 1 }}>
         ページ1
       </Button>
