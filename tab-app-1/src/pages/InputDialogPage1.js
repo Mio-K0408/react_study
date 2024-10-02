@@ -1,4 +1,4 @@
-// pages/Page3.js
+// pages/InputDialogPage1.js
 import React from 'react';
 import { Container, Button, Box } from '@mui/material';
 import CustomDialog from '../components/Dialog'; // 切り分けたダイアログコンポーネントをインポート

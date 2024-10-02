@@ -11,6 +11,7 @@ import MenuPage from './pages/MenuPage';
 import TabPage1 from './pages/TabPage1';
 import DndPage1 from './pages/DndPage1';
 import InputDialogPage1 from './pages/InputDialogPage1';
+import FormPage1 from './pages/FormPage1';
 
 // カスタムテーマの設定
 const theme = createTheme({
@@ -41,6 +42,7 @@ const AppContent = () => {
         <Route path="/" element={<MenuPage />} />
         <Route path="/tagpage1" element={<TabPage1 />} />
         <Route path="/inputdialogpage1" element={<InputDialogPage1 />} />
+        <Route path="/formpage1" element={<FormPage1 />} />
         <Route path="/dndpage1" element={<DndPage1 />} />        
       </Routes>
 
