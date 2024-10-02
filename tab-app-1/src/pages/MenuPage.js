@@ -12,8 +12,11 @@ const MenuPage = () => (
       <Button component={Link} to="/inputdialogpage1" variant="contained" color="primary" sx={{ m: 1 }}>
         フォームダイアログ
       </Button>
+      <Button component={Link} to="/formpage1" variant="contained" color="primary" sx={{ m: 1 }}>
+        フォーム
+      </Button>
       <Button component={Link} to="/dndpage1" variant="contained" color="primary" sx={{ m: 1 }}>
-        ページ3
+        DNS
       </Button>
     </Box>
   </Container>
